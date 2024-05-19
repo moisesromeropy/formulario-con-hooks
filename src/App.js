@@ -9,6 +9,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [newUser, setNewUser] = useState([]);
 
   
 
@@ -23,13 +24,14 @@ function App() {
                        setLastName={setLastName}
                        setEmail={setEmail}
                        setPassword={setPassword}
-                       setConfirmPassword={setConfirmPassword}/>
+                       setConfirmPassword={setConfirmPassword}
+                       setNewUser={setNewUser}/>
       <h2>Your Form Data</h2>
-      <p>First Name: {firstName}</p>
-      <p>Last Name: {lastName}</p>
-      <p>Email: {email}</p>
-      <p>Password: {password}</p>
-      <p>Confirm Password: {confirmPassword}</p>
+      <p>First Name: {newUser.firstName}</p>
+      <p>Last Name: {newUser.lastName}</p>
+      <p>Email: {newUser.email}</p>
+      <p>Password: {newUser.password}</p>
+      <p>Confirm Password: {newUser.confirmPassword}</p>
     </div>
   );
 }
